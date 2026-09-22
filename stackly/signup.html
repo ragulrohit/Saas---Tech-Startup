@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account — STACKLY</title>
+  <meta name="description" content="Sign up for a free Stackly workspace.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div class="auth-shell">
+
+    <!-- LEFT: VISUAL -->
+    <div class="auth-visual">
+      <img class="bg-img" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80" alt="Startup founders collaborating at a workspace with laptops">
+      <span class="auth-blob b1"></span>
+      <span class="auth-blob b2"></span>
+      <span class="auth-blob b3"></span>
+      <div class="chip3d c1"><i class="fa-solid fa-rocket"></i> Go live in minutes</div>
+      <div class="chip3d c2"><i class="fa-solid fa-user-group"></i> Unlimited seats</div>
+      <div class="chip3d c3"><i class="fa-solid fa-cloud"></i> Cloud native</div>
+      <div class="content">
+        <img class="brand-badge-image" src="images/Stackly_logo_gradient.png" alt="Stackly">
+        <h1>Start Building Something Big</h1>
+        <p class="desc">Create your free workspace today. Set up automation, connect your tools and invite your team — no credit card required.</p>
+        <div class="mini-stats">
+          <div class="mini-stat"><b>Free</b><span>14-day trial</span></div>
+          <div class="mini-stat"><b>120+</b><span>Integrations</span></div>
+          <div class="mini-stat"><b>2 min</b><span>Avg. setup time</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="auth-side">
+      <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left-long"></i> Back to Home</a>
+
+      <div class="auth-card">
+        <a href="index.html" class="auth-logo" aria-label="Stackly home">
+          <img class="auth-logo-image" src="images/Stackly_logo_gradient.png" alt="Stackly">
+        </a>
+
+        <h2>Create your account</h2>
+        <p class="sub">Tell us a little about you — it takes less than a minute.</p>
+
+        <div class="form-alert" id="signupAlert"></div>
+
+        <form class="auth-form" id="signupForm" novalidate>
+          <div class="form-field">
+            <label for="su-name">Full Name <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="su-name" name="name" placeholder="e.g. Rahul Kumar" autocomplete="name">
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="su-email">Email Address <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="su-email" name="email" placeholder="you@company.com" autocomplete="email">
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="su-password">Password <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="su-password" name="password" placeholder="At least 6 characters" autocomplete="new-password">
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="su-confirm">Confirm Password <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="su-confirm" name="confirm" placeholder="Repeat your password" autocomplete="new-password">
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="su-role">Select Role <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-user-tag"></i>
+              <select id="su-role" name="role">
+                <option value="">— Choose your role —</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+              </select>
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="checkline">
+              <input type="checkbox" id="su-terms" name="terms">
+              I agree to the Terms &amp; Conditions and Privacy Policy.
+            </label>
+            <span class="err-msg"></span>
+          </div>
+
+          <button type="submit" class="btn-auth">Create Account <i class="fa-solid fa-user-plus"></i></button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/custom-select.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team — STACKLY Dashboard</title>
+  <meta name="description" content="Meet your Stackly workspace team.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a href="../index.html" class="brand" aria-label="Stackly home">
+        <span class="brand-icon">S</span>
+        <span class="brand-name">STACKLY</span>
+      </a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="sidebar-profile">
+      <img src="https://i.pravatar.cc/150?img=47" data-user-avatar alt="Profile photo">
+      <div style="min-width:0">
+        <div class="nm" data-user-name>User</div>
+        <div class="em" data-user-email>user@mail.com</div>
+        <span class="rl" data-user-role>User</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav" aria-label="Dashboard navigation">
+      <p class="nav-label">Menu</p>
+      <a href="../dashboard.html" data-key="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a href="analytics.html" data-key="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+      <a href="projects.html" data-key="projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+      <a href="team.html" data-key="team"><i class="fa-solid fa-users"></i> Team</a>
+      <a href="customers.html" data-key="customers"><i class="fa-solid fa-handshake"></i> Customers</a>
+      <a href="reports.html" data-key="reports"><i class="fa-solid fa-file-lines"></i> Reports</a>
+      <a href="notifications.html" data-key="notifications"><i class="fa-solid fa-bell"></i> Notifications <span class="badge-dot">4</span></a>
+      <a href="settings.html" data-key="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+    <div class="sidebar-foot">
+      <button class="logout-btn js-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+    </div>
+  </aside>
+  <div class="side-overlay" id="sideOverlay"></div>
+
+  <main class="dash-main">
+    <header class="dash-top">
+      <button class="menu-open" id="menuOpen" aria-label="Open sidebar"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="page-title">Team</h1>
+      <div class="spacer"></div>
+      <div class="top-actions">
+        <div class="top-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Search..." aria-label="Search">
+        </div>
+        <a href="notifications.html" class="icon-btn" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="notif-dot"></span></a>
+        <div class="top-avatar">
+          <img src="https://i.pravatar.cc/150?img=47" data-user-avatar alt="Profile avatar">
+          <div class="ta-info"><b data-user-name>User</b><span data-user-role>User</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-body">
+      <section class="welcome-strip" aria-live="polite">
+        <div>
+          <h2>Your Team</h2>
+          <p>The people shipping with you — click a profile to see the details.</p>
+        </div>
+        <div class="welcome-chips">
+          <span class="chip"><i class="fa-solid fa-users" style="color:#7c3aed"></i> 8 members</span>
+          <span class="chip"><i class="fa-solid fa-circle" style="color:#22c55e"></i> 7 online</span>
+        </div>
+      </section>
+
+      <section class="team-grid">
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=12" alt="Portrait of Aisha Rahman, Head of Product">
+          <h4>Aisha Rahman</h4>
+          <p class="t-role">Head of Product</p>
+          <p class="t-email">aisha@stackly.io</p>
+          <span class="t-status">Available</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=12" data-name="Aisha Rahman" data-role="Head of Product" data-email="aisha@stackly.io" data-status="Available">View Profile</button>
+        </article>
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=32" alt="Portrait of Daniel Okafor, Lead Engineer">
+          <h4>Daniel Okafor</h4>
+          <p class="t-role">Lead Engineer</p>
+          <p class="t-email">daniel@stackly.io</p>
+          <span class="t-status">Available</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=32" data-name="Daniel Okafor" data-role="Lead Engineer" data-email="daniel@stackly.io" data-status="Available">View Profile</button>
+        </article>
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=47" alt="Portrait of Maya Patel, Product Designer">
+          <h4>Maya Patel</h4>
+          <p class="t-role">Product Designer</p>
+          <p class="t-email">maya@stackly.io</p>
+          <span class="t-status away">In a meeting</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=47" data-name="Maya Patel" data-role="Product Designer" data-email="maya@stackly.io" data-status="In a meeting">View Profile</button>
+        </article>
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=5" alt="Portrait of Lucas Meyer, Data Scientist">
+          <h4>Lucas Meyer</h4>
+          <p class="t-role">Data Scientist</p>
+          <p class="t-email">lucas@stackly.io</p>
+          <span class="t-status">Available</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=5" data-name="Lucas Meyer" data-role="Data Scientist" data-email="lucas@stackly.io" data-status="Available">View Profile</button>
+        </article>
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=47" alt="Portrait of Sofia Rossi, Marketing Lead">
+          <h4>Sofia Rossi</h4>
+          <p class="t-role">Marketing Lead</p>
+          <p class="t-email">sofia@stackly.io</p>
+          <span class="t-status">Available</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=47" data-name="Sofia Rossi" data-role="Marketing Lead" data-email="sofia@stackly.io" data-status="Available">View Profile</button>
+        </article>
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=33" alt="Portrait of Ethan Wright, Full-Stack Developer">
+          <h4>Ethan Wright</h4>
+          <p class="t-role">Full-Stack Developer</p>
+          <p class="t-email">ethan@stackly.io</p>
+          <span class="t-status away">On call</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=33" data-name="Ethan Wright" data-role="Full-Stack Developer" data-email="ethan@stackly.io" data-status="On call">View Profile</button>
+        </article>
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=45" alt="Portrait of Hana Kim, Customer Success Manager">
+          <h4>Hana Kim</h4>
+          <p class="t-role">Customer Success</p>
+          <p class="t-email">hana@stackly.io</p>
+          <span class="t-status">Available</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=45" data-name="Hana Kim" data-role="Customer Success Manager" data-email="hana@stackly.io" data-status="Available">View Profile</button>
+        </article>
+        <article class="team-card">
+          <img src="https://i.pravatar.cc/150?img=68" alt="Portrait of Omar Haddad, DevOps Engineer">
+          <h4>Omar Haddad</h4>
+          <p class="t-role">DevOps Engineer</p>
+          <p class="t-email">omar@stackly.io</p>
+          <span class="t-status away">On call</span>
+          <button class="btn-mini js-view-profile" data-avatar="https://i.pravatar.cc/150?img=68" data-name="Omar Haddad" data-role="DevOps Engineer" data-email="omar@stackly.io" data-status="On call">View Profile</button>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- TEAM PROFILE MODAL -->
+  <div class="modal-overlay" id="teamModal" role="dialog" aria-modal="true" aria-labelledby="teamModalTitle">
+    <div class="modal">
+      <div id="teamModalBody" style="padding-top:6px"></div>
+      <h3 id="teamModalTitle" style="clip:rect(0 0 0 0);position:absolute">Team member profile</h3>
+      <div class="m-actions" style="margin-top:18px">
+        <button class="btn-ghost-d" id="teamModalClose">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGOUT MODAL -->
+  <div class="modal-overlay" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutTitle">
+    <div class="modal">
+      <div class="m-ico"><i class="fa-solid fa-right-from-bracket"></i></div>
+      <h3 id="logoutTitle">Are you sure you want to logout?</h3>
+      <p>You'll need to sign back in to access your workspace.</p>
+      <div class="m-actions">
+        <button class="btn-ghost-d" id="btnCancelLogout">Cancel</button>
+        <button class="btn-danger" id="btnConfirmLogout"><i class="fa-solid fa-check"></i> Confirm Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="dashToast" role="status">
+    <i class="fa-solid fa-circle-check"></i>
+    <span data-toast-msg>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/custom-select.js"></script>
+</body>
+</html>

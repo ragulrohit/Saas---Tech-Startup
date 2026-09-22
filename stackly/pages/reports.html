@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports — STACKLY Dashboard</title>
+  <meta name="description" content="View and download Stackly reports.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a href="../index.html" class="brand" aria-label="Stackly home">
+        <span class="brand-icon">S</span>
+        <span class="brand-name">STACKLY</span>
+      </a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="sidebar-profile">
+      <img src="https://i.pravatar.cc/150?img=56" data-user-avatar alt="Profile photo">
+      <div style="min-width:0">
+        <div class="nm" data-user-name>User</div>
+        <div class="em" data-user-email>user@mail.com</div>
+        <span class="rl" data-user-role>User</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav" aria-label="Dashboard navigation">
+      <p class="nav-label">Menu</p>
+      <a href="../dashboard.html" data-key="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a href="analytics.html" data-key="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+      <a href="projects.html" data-key="projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+      <a href="team.html" data-key="team"><i class="fa-solid fa-users"></i> Team</a>
+      <a href="customers.html" data-key="customers"><i class="fa-solid fa-handshake"></i> Customers</a>
+      <a href="reports.html" data-key="reports"><i class="fa-solid fa-file-lines"></i> Reports</a>
+      <a href="notifications.html" data-key="notifications"><i class="fa-solid fa-bell"></i> Notifications <span class="badge-dot">4</span></a>
+      <a href="settings.html" data-key="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+    <div class="sidebar-foot">
+      <button class="logout-btn js-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+    </div>
+  </aside>
+  <div class="side-overlay" id="sideOverlay"></div>
+
+  <main class="dash-main">
+    <header class="dash-top">
+      <button class="menu-open" id="menuOpen" aria-label="Open sidebar"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="page-title">Reports</h1>
+      <div class="spacer"></div>
+      <div class="top-actions">
+        <div class="top-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Search..." aria-label="Search">
+        </div>
+        <a href="notifications.html" class="icon-btn" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="notif-dot"></span></a>
+        <div class="top-avatar">
+          <img src="https://i.pravatar.cc/150?img=56" data-user-avatar alt="Profile avatar">
+          <div class="ta-info"><b data-user-name>User</b><span data-user-role>User</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-body">
+      <section class="welcome-strip" aria-live="polite">
+        <div>
+          <h2>Reports &amp; Downloads</h2>
+          <p>Generate, view and export reports in PDF, CSV or XLSX.</p>
+        </div>
+        <div class="welcome-chips">
+          <span class="chip"><i class="fa-solid fa-file-export" style="color:#7c3aed"></i> Exports ready</span>
+        </div>
+      </section>
+
+      <section class="report-grid">
+        <article class="report-card">
+          <div class="r-ico"><i class="fa-solid fa-chart-column"></i></div>
+          <h4>Sales Report</h4>
+          <p>Revenue, deals won and pipeline health for the current period.</p>
+          <div class="btn-row">
+            <button class="btn-mini js-demo"><i class="fa-solid fa-download"></i> Download</button>
+          </div>
+        </article>
+        <article class="report-card">
+          <div class="r-ico" style="background:linear-gradient(135deg,#3b82f6,#06b6d4)"><i class="fa-solid fa-user-group"></i></div>
+          <h4>User Report</h4>
+          <p>Signups, retention cohorts and plan distribution across time.</p>
+          <div class="btn-row">
+            <button class="btn-mini js-demo"><i class="fa-solid fa-download"></i> Download</button>
+          </div>
+        </article>
+        <article class="report-card">
+          <div class="r-ico" style="background:linear-gradient(135deg,#ec4899,#f43f5e)"><i class="fa-solid fa-sack-dollar"></i></div>
+          <h4>Revenue Report</h4>
+          <p>MRR/ARR evolution, churn and expansion revenue breakdowns.</p>
+          <div class="btn-row">
+            <button class="btn-mini js-demo"><i class="fa-solid fa-download"></i> Download</button>
+          </div>
+        </article>
+        <article class="report-card">
+          <div class="r-ico" style="background:linear-gradient(135deg,#f59e0b,#ec4899)"><i class="fa-solid fa-gauge-high"></i></div>
+          <h4>Performance Report</h4>
+          <p>Uptime, latency and system health across all services.</p>
+          <div class="btn-row">
+            <button class="btn-mini js-demo"><i class="fa-solid fa-download"></i> Download</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head"><h3><i class="fa-solid fa-calendar-check" style="color:#7c3aed;margin-right:8px"></i> Scheduled Report Status</h3><span class="hint">Auto-delivery</span></div>
+        <div class="table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Report</th>
+                <th>Frequency</th>
+                <th>Last Sent</th>
+                <th>Recipients</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:700">Sales Report</td>
+                <td style="color:#6b7390">Weekly · Mon</td>
+                <td style="color:#6b7390">Sep 21, 2026</td>
+                <td style="color:#6b7390">Leadership (5)</td>
+                <td><span class="badge-pill badge-green">On time</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:700">Revenue Report</td>
+                <td style="color:#6b7390">Monthly · 1st</td>
+                <td style="color:#6b7390">Sep 01, 2026</td>
+                <td style="color:#6b7390">Finance (3)</td>
+                <td><span class="badge-pill badge-green">On time</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:700">Performance Report</td>
+                <td style="color:#6b7390">Daily · 06:00</td>
+                <td style="color:#6b7390">Today</td>
+                <td style="color:#6b7390">Engineering (8)</td>
+                <td><span class="badge-pill badge-green">On time</span></td>
+              </tr>
+              <tr>
+                <td style="font-weight:700">User Report</td>
+                <td style="color:#6b7390">Weekly · Wed</td>
+                <td style="color:#6b7390">None yet</td>
+                <td style="color:#6b7390">—</td>
+                <td><span class="badge-pill badge-amber">Not scheduled</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutTitle">
+    <div class="modal">
+      <div class="m-ico"><i class="fa-solid fa-right-from-bracket"></i></div>
+      <h3 id="logoutTitle">Are you sure you want to logout?</h3>
+      <p>You'll need to sign back in to access your workspace.</p>
+      <div class="m-actions">
+        <button class="btn-ghost-d" id="btnCancelLogout">Cancel</button>
+        <button class="btn-danger" id="btnConfirmLogout"><i class="fa-solid fa-check"></i> Confirm Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="dashToast" role="status">
+    <i class="fa-solid fa-circle-check"></i>
+    <span data-toast-msg>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/custom-select.js"></script>
+</body>
+</html>

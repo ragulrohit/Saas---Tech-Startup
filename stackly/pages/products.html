@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products — STACKLY</title>
+  <meta name="description" content="Discover Stackly products: Cloud, Analytics, AI and CRM.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner container">
+      <a href="../index.html" class="brand" aria-label="Stackly home">
+        <span class="brand-icon">S</span>
+        <span class="brand-name">STACKLY</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" data-nav="home">Home</a></li>
+        <li><a href="solutions.html" data-nav="solutions">Solutions</a></li>
+        <li><a href="products.html" data-nav="products">Products</a></li>
+        <li><a href="services.html" data-nav="services">Services</a></li>
+        <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="../login.html" class="btn btn-ghost btn-sm">Login</a>
+        <a href="../signup.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <div class="nav-cta in-menu" id="menuCta">
+        <a href="../login.html" class="btn btn-ghost btn-sm">Login</a>
+        <a href="../signup.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="page-hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <div class="container page-hero-grid">
+      <div>
+        <span class="breadcrumb"><a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> Products</span>
+        <h1 class="page-hero-title">A product suite that <span class="grad-text">works as one</span></h1>
+        <p class="page-hero-text">Every Stackly product is powerful on its own and unstoppable together. Share data, users and context across the whole suite.</p>
+        <div class="hero-actions">
+          <a href="../signup.html" class="btn btn-primary">Start Free Trial <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
+        </div>
+      </div>
+      <div class="hero-visual hero-people">
+        <div class="hero-person hero-person-main">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=700&q=85" alt="Product team working together" loading="eager">
+          <span class="hero-person-label"><i class="fa-solid fa-circle-check"></i> One team, one workspace</span>
+        </div>
+        <div class="hero-person hero-person-top">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=85" alt="Product team collaborating" loading="eager">
+        </div>
+        <div class="hero-person hero-person-bottom">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=500&q=85" alt="Colleagues working around a table" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTS ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow"><i class="fa-solid fa-boxes-stacked"></i> Our Products</span>
+        <h2 class="sec-title">Four products. <span class="grad-text">One workspace.</span></h2>
+        <p class="sec-sub">Pick the ones you need today — add more as you grow, with data flowing between them automatically.</p>
+      </div>
+
+      <!-- Stackly Cloud -->
+      <div class="grid-2" id="cloud" style="margin-bottom:44px">
+        <div class="split-card reveal reveal-left">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Cloud computing servers stacked in a row">
+          <span class="tag"><i class="fa-solid fa-cloud"></i>&nbsp; Infrastructure</span>
+          <h3>Stackly Cloud</h3>
+          <p>Deploy, scale and monitor any workload across global regions — with auto-scaling, built-in CI/CD and one-click previews.</p>
+          <ul class="feature-list" style="margin:14px 0 20px">
+            <li><i class="fa-solid fa-server"></i> Managed Kubernetes &amp; serverless runtimes</li>
+            <li><i class="fa-solid fa-gauge-high"></i> Edge-accelerated global delivery</li>
+            <li><i class="fa-solid fa-file-shield"></i> Automatic backups &amp; disaster recovery</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-sm js-demo">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="split-card reveal reveal-right" id="analytics">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Analytics dashboards with charts on a desk monitor">
+          <span class="tag"><i class="fa-solid fa-chart-line"></i>&nbsp; Insights</span>
+          <h3>Stackly Analytics</h3>
+          <p>Real-time dashboards, funnels and funnels-to-action reporting that turn raw product data into decisions the whole team trusts.</p>
+          <ul class="feature-list" style="margin:14px 0 20px">
+            <li><i class="fa-solid fa-bolt"></i> Sub-second queries on billions of events</li>
+            <li><i class="fa-solid fa-filter"></i> Custom funnels, cohorts &amp; retention views</li>
+            <li><i class="fa-solid fa-bell"></i> Anomaly alerts delivered to your inbox</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-sm js-demo">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="split-card reveal reveal-left" id="ai">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=900&q=80" alt="Abstract AI neural network artwork">
+          <span class="tag"><i class="fa-solid fa-brain"></i>&nbsp; Intelligence</span>
+          <h3>Stackly AI</h3>
+          <p>An AI co-pilot for your business: draft content, summarize reports, forecast revenue and answer questions about your data.</p>
+          <ul class="feature-list" style="margin:14px 0 20px">
+            <li><i class="fa-solid fa-robot"></i> Natural-language queries on company data</li>
+            <li><i class="fa-solid fa-wand-magic-sparkles"></i> Auto-generated summaries and reports</li>
+            <li><i class="fa-solid fa-cubes"></i> Custom fine-tuned models, private by default</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-sm js-demo">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="split-card reveal reveal-right" id="crm">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80" alt="Customer success professional smiling at her desk">
+          <span class="tag"><i class="fa-solid fa-handshake"></i>&nbsp; Revenue</span>
+          <h3>Stackly CRM</h3>
+          <p>Track every lead, deal and conversation in one pipeline — with email sync, automation and forecasting built in.</p>
+          <ul class="feature-list" style="margin:14px 0 20px">
+            <li><i class="fa-solid fa-list-check"></i> Visual pipelines &amp; drag-and-drop stages</li>
+            <li><i class="fa-solid fa-envelope-open-text"></i> Two-way email &amp; calendar sync</li>
+            <li><i class="fa-solid fa-chart-pie"></i> Revenue forecasting with AI assist</li>
+          </ul>
+          <a href="#" class="btn btn-primary btn-sm js-demo">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card reveal reveal-zoom">
+        <h2>Try Every Stackly Product Free</h2>
+        <p>Your 14-day trial includes Cloud, Analytics, AI and CRM — fully connected, no card required.</p>
+        <div class="btn-row">
+          <a href="../signup.html" class="btn btn-primary">Start Free Trial <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-light">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" aria-label="Stackly home">
+            <span class="brand-icon">S</span>
+            <span class="brand-name">STACKLY</span>
+          </a>
+          <p>Build. Scale. Innovate. The intelligent platform that helps modern businesses simplify operations and grow faster.</p>
+          <div class="socials" aria-label="Stackly social media">
+            <a href="#" class="footer-social" aria-label="Stackly on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#about"><i class="fa-solid fa-angle-right"></i> About</a></li>
+            <li><a href="solutions.html"><i class="fa-solid fa-angle-right"></i> Solutions</a></li>
+            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="products.html#cloud"><i class="fa-solid fa-angle-right"></i> Stackly Cloud</a></li>
+            <li><a href="products.html#analytics"><i class="fa-solid fa-angle-right"></i> Stackly Analytics</a></li>
+            <li><a href="products.html#ai"><i class="fa-solid fa-angle-right"></i> Stackly AI</a></li>
+            <li><a href="products.html#crm"><i class="fa-solid fa-angle-right"></i> Stackly CRM</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@stackly.io"><i class="fa-solid fa-envelope"></i> hello@stackly.io</a></li>
+            <li><a href="tel:+15551234567"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-location-dot"></i> San Francisco, CA</a></li>
+            <li><a href="../login.html"><i class="fa-solid fa-right-to-bracket"></i> Member Login</a></li>
+            <li><a href="../signup.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Stackly Technologies. All rights reserved.</span>
+        <span class="made">Made with <i class="fa-solid fa-heart"></i> for modern startups</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics — STACKLY Dashboard</title>
+  <meta name="description" content="Deep product and marketing analytics.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <a href="../index.html" class="brand" aria-label="Stackly home">
+        <span class="brand-icon">S</span>
+        <span class="brand-name">STACKLY</span>
+      </a>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="sidebar-profile">
+      <img src="https://i.pravatar.cc/150?img=23" data-user-avatar alt="Profile photo">
+      <div style="min-width:0">
+        <div class="nm" data-user-name>User</div>
+        <div class="em" data-user-email>user@mail.com</div>
+        <span class="rl" data-user-role>User</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav" aria-label="Dashboard navigation">
+      <p class="nav-label">Menu</p>
+      <a href="../dashboard.html" data-key="overview"><i class="fa-solid fa-gauge-high"></i> Overview</a>
+      <a href="analytics.html" data-key="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+      <a href="projects.html" data-key="projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+      <a href="team.html" data-key="team"><i class="fa-solid fa-users"></i> Team</a>
+      <a href="customers.html" data-key="customers"><i class="fa-solid fa-handshake"></i> Customers</a>
+      <a href="reports.html" data-key="reports"><i class="fa-solid fa-file-lines"></i> Reports</a>
+      <a href="notifications.html" data-key="notifications"><i class="fa-solid fa-bell"></i> Notifications <span class="badge-dot">4</span></a>
+      <a href="settings.html" data-key="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+    <div class="sidebar-foot">
+      <button class="logout-btn js-logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+    </div>
+  </aside>
+  <div class="side-overlay" id="sideOverlay"></div>
+
+  <main class="dash-main">
+    <header class="dash-top">
+      <button class="menu-open" id="menuOpen" aria-label="Open sidebar"><i class="fa-solid fa-bars"></i></button>
+      <h1 class="page-title">Analytics</h1>
+      <div class="spacer"></div>
+      <div class="top-actions">
+        <div class="top-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Search..." aria-label="Search">
+        </div>
+        <a href="notifications.html" class="icon-btn" aria-label="Notifications"><i class="fa-solid fa-bell"></i><span class="notif-dot"></span></a>
+        <div class="top-avatar">
+          <img src="https://i.pravatar.cc/150?img=23" data-user-avatar alt="Profile avatar">
+          <div class="ta-info"><b data-user-name>User</b><span data-user-role>User</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="dash-body">
+      <section class="welcome-strip" aria-live="polite">
+        <div>
+          <h2>Analytics <em>Insights</em></h2>
+          <p>Traffic, conversions and revenue growth — all in one place.</p>
+        </div>
+        <div class="welcome-chips">
+          <span class="chip"><i class="fa-solid fa-calendar" style="color:#7c3aed"></i> Last 7 days</span>
+          <span class="chip"><i class="fa-solid fa-bolt" style="color:#06b6d4"></i> Live</span>
+        </div>
+      </section>
+
+      <section class="kpi-grid" aria-label="Traffic statistics">
+        <article class="kpi-card kpi-grad-1">
+          <div class="kpi-top"><i class="fa-solid fa-eye"></i><span class="trend"><i class="fa-solid fa-arrow-trend-up"></i> +16%</span></div>
+          <div class="kpi-num"><span data-count="89240">0</span></div>
+          <div class="kpi-label">Total Sessions</div>
+        </article>
+        <article class="kpi-card kpi-grad-2">
+          <div class="kpi-top"><i class="fa-solid fa-user-check"></i><span class="trend"><i class="fa-solid fa-arrow-trend-up"></i> +9%</span></div>
+          <div class="kpi-num"><span data-count="3122">0</span></div>
+          <div class="kpi-label">New Visitors</div>
+        </article>
+        <article class="kpi-card kpi-grad-3">
+          <div class="kpi-top"><i class="fa-solid fa-percent"></i><span class="trend"><i class="fa-solid fa-arrow-trend-up"></i> +2.1%</span></div>
+          <div class="kpi-num"><span data-count="6.4" data-suffix="%">0</span></div>
+          <div class="kpi-label">Conversion Rate</div>
+        </article>
+        <article class="kpi-card kpi-grad-4">
+          <div class="kpi-top"><i class="fa-solid fa-arrow-trend-up"></i><span class="trend"><i class="fa-solid fa-arrow-trend-up"></i> +24%</span></div>
+          <div class="kpi-num"><span data-count="128" data-suffix="%">0</span></div>
+          <div class="kpi-label">Revenue Growth (YoY)</div>
+        </article>
+      </section>
+
+      <section class="chart-grid-2">
+        <div class="panel">
+          <div class="panel-head"><h3>Traffic Overview</h3><span class="hint">Visitors &amp; conversions</span></div>
+          <div class="chart-box"><canvas id="chartTraffic" role="img" aria-label="Line chart of weekly traffic and conversions"></canvas></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Channel Performance</h3><span class="hint">Leads vs sales</span></div>
+          <div class="chart-box"><canvas id="chartChannels" role="img" aria-label="Bar chart of channel leads and sales"></canvas></div>
+        </div>
+      </section>
+
+      <section class="chart-grid-3">
+        <div class="panel">
+          <div class="panel-head"><h3>Traffic Sources</h3><span class="hint">All channels</span></div>
+          <div class="chart-box sm"><canvas id="chartSources" role="img" aria-label="Pie chart of traffic sources"></canvas></div>
+        </div>
+        <div class="panel" style="grid-column: span 2">
+          <div class="panel-head"><h3>Analytics Workspace</h3><span class="hint">Your data at a glance</span></div>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1100&q=80" alt="Analytics dashboards displayed across large monitors" style="width:100%;height:240px;object-fit:cover;border-radius:14px">
+          <p style="font-size:0.88rem;color:#6b7390;margin-top:14px">Dig deeper into funnels, cohorts and retention. Build a custom report and <a href="reports.html" style="color:#7c3aed;font-weight:700">download it</a> in one click.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="logoutModal" role="dialog" aria-modal="true" aria-labelledby="logoutTitle">
+    <div class="modal">
+      <div class="m-ico"><i class="fa-solid fa-right-from-bracket"></i></div>
+      <h3 id="logoutTitle">Are you sure you want to logout?</h3>
+      <p>You'll need to sign back in to access your workspace.</p>
+      <div class="m-actions">
+        <button class="btn-ghost-d" id="btnCancelLogout">Cancel</button>
+        <button class="btn-danger" id="btnConfirmLogout"><i class="fa-solid fa-check"></i> Confirm Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="dashToast" role="status">
+    <i class="fa-solid fa-circle-check"></i>
+    <span data-toast-msg>Done</span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script src="../js/custom-select.js"></script>
+</body>
+</html>

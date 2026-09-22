@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — STACKLY</title>
+  <meta name="description" content="Log in to your Stackly workspace.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div class="auth-shell">
+
+    <!-- LEFT: VISUAL -->
+    <div class="auth-visual">
+      <img class="bg-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Professionals working with technology in a bright office">
+      <span class="auth-blob b1"></span>
+      <span class="auth-blob b2"></span>
+      <span class="auth-blob b3"></span>
+      <div class="chip3d c1"><i class="fa-solid fa-shield-halved"></i> Enterprise Security</div>
+      <div class="chip3d c2"><i class="fa-solid fa-robot"></i> AI Powered</div>
+      <div class="chip3d c3"><i class="fa-solid fa-chart-line"></i> Real-Time Analytics</div>
+      <div class="content">
+        <img class="brand-badge-image" src="images/Stackly_logo_gradient.png" alt="Stackly">
+        <h1>Welcome Back to Stackly</h1>
+        <p class="desc">Your workspace is ready. Jump back in, check your dashboards, and keep building something bigger — your team is already growing.</p>
+        <div class="mini-stats">
+          <div class="mini-stat"><b>12K+</b><span>Active teams</span></div>
+          <div class="mini-stat"><b>99.9%</b><span>Uptime SLA</span></div>
+          <div class="mini-stat"><b>24/7</b><span>Expert support</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div class="auth-side">
+      <a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left-long"></i> Back to Home</a>
+
+      <div class="auth-card">
+        <a href="index.html" class="auth-logo" aria-label="Stackly home">
+          <img class="auth-logo-image" src="images/Stackly_logo_gradient.png" alt="Stackly">
+        </a>
+
+        <h2>Log in to your account</h2>
+        <p class="sub">Enter your credentials to continue to your dashboard.</p>
+
+        <div class="form-alert" id="loginAlert"></div>
+
+        <form class="auth-form" id="loginForm" autocomplete="off" novalidate>
+          <div class="form-field">
+            <label for="lg-email">Email Address <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="lg-email" name="email" placeholder="you@company.com" autocomplete="email">
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="lg-password">Password <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" id="lg-password" name="password" placeholder="••••••••" autocomplete="current-password">
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="lg-role">Select Role <span>*</span></label>
+            <div class="field-wrap">
+              <i class="fa-solid fa-user-tag"></i>
+              <select id="lg-role" name="role">
+                <option value="">— Choose your role —</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+              </select>
+            </div>
+            <span class="err-msg"></span>
+          </div>
+
+          <div class="form-row">
+            <label class="checkline">
+              <input type="checkbox" id="lg-remember" name="remember"> Remember Me
+            </label>
+            <a href="#" class="link-pill js-demo" id="forgotLink">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn-auth">Login <i class="fa-solid fa-right-to-bracket"></i></button>
+        </form>
+
+        <div class="divider">or continue with</div>
+        <button type="button" class="btn-google js-demo">
+          <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo"> Continue with Google
+        </button>
+
+        <p class="auth-switch">Don't have an account? <a href="signup.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/custom-select.js"></script>
+</body>
+</html>

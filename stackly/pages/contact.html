@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — STACKLY</title>
+  <meta name="description" content="Get in touch with the Stackly team.">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner container">
+      <a href="../index.html" class="brand" aria-label="Stackly home">
+        <span class="brand-icon">S</span>
+        <span class="brand-name">STACKLY</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" data-nav="home">Home</a></li>
+        <li><a href="solutions.html" data-nav="solutions">Solutions</a></li>
+        <li><a href="products.html" data-nav="products">Products</a></li>
+        <li><a href="services.html" data-nav="services">Services</a></li>
+        <li><a href="pricing.html" data-nav="pricing">Pricing</a></li>
+        <li><a href="contact.html" data-nav="contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="../login.html" class="btn btn-ghost btn-sm">Login</a>
+        <a href="../signup.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <div class="nav-cta in-menu" id="menuCta">
+        <a href="../login.html" class="btn btn-ghost btn-sm">Login</a>
+        <a href="../signup.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="page-hero">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <div class="container page-hero-grid">
+      <div>
+        <span class="breadcrumb"><a href="../index.html">Home</a> <i class="fa-solid fa-angle-right"></i> Contact</span>
+        <h1 class="page-hero-title">Let's build something <span class="grad-text">great together</span></h1>
+        <p class="page-hero-text">Questions about plans, demos for your team, or a partnership idea — our humans answer fast, every time.</p>
+        <div class="hero-actions">
+          <a href="mailto:hello@stackly.io" class="btn btn-primary">Email Us <i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+15551234567" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a>
+        </div>
+      </div>
+      <div>
+        <img class="page-hero-img js-tilt" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=900&q=80" alt="Two business professionals shaking hands in a bright office">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section">
+    <div class="container contact-grid">
+      <!-- LEFT: INFO -->
+      <div class="contact-info-card reveal reveal-left">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=900&q=80" alt="Interior of the Stackly modern office headquarters">
+        <h3 style="font-family:Sora,sans-serif;margin-bottom:6px">Our Office</h3>
+        <p style="font-size:0.88rem;color:#aab2d4;margin-bottom:10px">Visit us for a coffee and a tour — we love meeting customers face to face.</p>
+        <div class="info-row">
+          <i class="fa-solid fa-envelope"></i>
+          <div><b>Email</b><span>hello@stackly.io</span></div>
+        </div>
+        <div class="info-row">
+          <i class="fa-solid fa-phone"></i>
+          <div><b>Phone</b><span>+1 (555) 123-4567</span></div>
+        </div>
+        <div class="info-row">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><b>Location</b><span>548 Market Street, Suite 9200, San Francisco, CA 94104</span></div>
+        </div>
+        <div class="info-row">
+          <i class="fa-solid fa-clock"></i>
+          <div><b>Business Hours</b><span>Mon–Fri · 9:00 AM – 6:00 PM PT</span></div>
+        </div>
+        <div class="contact-map-wrap">
+          <h3>Find us on the map</h3>
+          <iframe
+            class="contact-map"
+            src="https://www.google.com/maps?q=548+Market+Street,+San+Francisco,+CA+94104&output=embed"
+            title="Stackly office location on Google Maps"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="contact-form reveal reveal-right">
+        <span class="eyebrow"><i class="fa-solid fa-paper-plane"></i> Send a message</span>
+        <h2 class="sec-title" style="margin-bottom:8px">Tell us what you need</h2>
+        <p class="sec-sub" style="margin-bottom:22px">We typically reply within one business day.</p>
+
+        <div class="form-alert" id="contactAlert"></div>
+
+        <form id="contactForm" novalidate>
+          <div class="form-grid-2">
+            <div class="form-field">
+              <label for="cf-name">Full Name <span>*</span></label>
+              <input type="text" id="cf-name" name="name" placeholder="e.g. Aria Sharma" autocomplete="name">
+              <span class="err-msg"></span>
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email <span>*</span></label>
+              <input type="email" id="cf-email" name="email" placeholder="you@company.com" autocomplete="email">
+              <span class="err-msg"></span>
+            </div>
+            <div class="form-field">
+              <label for="cf-phone">Phone</label>
+              <input type="tel" id="cf-phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel">
+              <span class="err-msg"></span>
+            </div>
+            <div class="form-field">
+              <label for="cf-company">Company</label>
+              <input type="text" id="cf-company" name="company" placeholder="Acme Inc.">
+              <span class="err-msg"></span>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">Subject <span>*</span></label>
+            <input type="text" id="cf-subject" name="subject" placeholder="How can we help?">
+            <span class="err-msg"></span>
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message <span>*</span></label>
+            <textarea id="cf-message" name="message" placeholder="Tell us a little about your project..."></textarea>
+            <span class="err-msg"></span>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card reveal reveal-zoom">
+        <h2>Prefer a Live Demo?</h2>
+        <p>Book a 30-minute walkthrough with a product specialist and see Stackly on your own data.</p>
+        <div class="btn-row">
+          <a href="../signup.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="mailto:hello@stackly.io" class="btn btn-light">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand" aria-label="Stackly home">
+            <span class="brand-icon">S</span>
+            <span class="brand-name">STACKLY</span>
+          </a>
+          <p>Build. Scale. Innovate. The intelligent platform that helps modern businesses simplify operations and grow faster.</p>
+          <div class="socials" aria-label="Stackly social media">
+            <a href="#" class="footer-social" aria-label="Stackly on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="footer-social" aria-label="Stackly on YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html#about"><i class="fa-solid fa-angle-right"></i> About</a></li>
+            <li><a href="solutions.html"><i class="fa-solid fa-angle-right"></i> Solutions</a></li>
+            <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> Products</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> Services</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="products.html#cloud"><i class="fa-solid fa-angle-right"></i> Stackly Cloud</a></li>
+            <li><a href="products.html#analytics"><i class="fa-solid fa-angle-right"></i> Stackly Analytics</a></li>
+            <li><a href="products.html#ai"><i class="fa-solid fa-angle-right"></i> Stackly AI</a></li>
+            <li><a href="products.html#crm"><i class="fa-solid fa-angle-right"></i> Stackly CRM</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@stackly.io"><i class="fa-solid fa-envelope"></i> hello@stackly.io</a></li>
+            <li><a href="tel:+15551234567"><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-location-dot"></i> San Francisco, CA</a></li>
+            <li><a href="../login.html"><i class="fa-solid fa-right-to-bracket"></i> Member Login</a></li>
+            <li><a href="../signup.html"><i class="fa-solid fa-user-plus"></i> Create Account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Stackly Technologies. All rights reserved.</span>
+        <span class="made">Made with <i class="fa-solid fa-heart"></i> for modern startups</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
