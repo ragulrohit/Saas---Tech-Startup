@@ -48,7 +48,7 @@
 
     var arrow = document.createElement("span");
     arrow.className = "custom-select-arrow";
-    arrow.innerHTML = "<i class=\"fa-solid fa-chevron-down\"></i>";
+    arrow.setAttribute("aria-hidden", "true");
     button.appendChild(document.createElement("span"));
     button.appendChild(arrow);
 

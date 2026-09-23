@@ -34,6 +34,7 @@
   }
 
   var avatarSeed = userRole ? userRole.toLowerCase() : "user";
+  var avatarFallback = root + "assets/icons/profile-avatar.svg";
   var avatarImg =
     settings.avatar && settings.avatar.indexOf("http") === 0
       ? settings.avatar
@@ -58,6 +59,9 @@
   });
   document.querySelectorAll("[data-user-role]").forEach(function (el) { el.textContent = userRole; });
   document.querySelectorAll("[data-user-avatar]").forEach(function (el) {
+    el.addEventListener("error", function () {
+      if (el.getAttribute("src") !== avatarFallback) el.setAttribute("src", avatarFallback);
+    });
     el.setAttribute("src", avatarImg);
     el.setAttribute("alt", "Profile photo of " + userName);
   });

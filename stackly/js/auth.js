@@ -9,16 +9,13 @@
   document.querySelectorAll("[data-password-toggle]").forEach(function (toggle) {
     toggle.addEventListener("click", function () {
       var input = document.getElementById(toggle.getAttribute("data-password-toggle"));
-      var icon = toggle.querySelector("i");
+      var icon = toggle.querySelector("use");
       if (!input) return;
 
       var showing = input.type === "text";
       input.type = showing ? "password" : "text";
       toggle.setAttribute("aria-label", showing ? "Show password" : "Hide password");
-      if (icon) {
-        icon.classList.toggle("fa-eye", showing);
-        icon.classList.toggle("fa-eye-slash", !showing);
-      }
+      if (icon) icon.setAttribute("href", "assets/icons/service-icons.svg#" + (showing ? "eye" : "eye-slash"));
     });
   });
 

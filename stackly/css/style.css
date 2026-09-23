@@ -1636,7 +1636,8 @@ textarea {
   font-size: 0.95rem;
 }
 
-.feature-list li i {
+.feature-list li i,
+.feature-list li .service-icon {
   color: var(--purple);
   background: rgba(124, 58, 237, 0.1);
   width: 30px;
@@ -1646,6 +1647,14 @@ textarea {
   place-items: center;
   font-size: 0.8rem;
   flex: none;
+}
+
+.feature-list li .service-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* ---------- Footer ---------- */

@@ -726,6 +726,44 @@ body.dark .panel {
     box-shadow: var(--shadow-2);
   }
 
+  .grow-media,
+  .toggle-row {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+
+  .grow-media:hover,
+  .toggle-row:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 58, 237, 0.3);
+    box-shadow: var(--shadow-2);
+  }
+
+  .dash-main .welcome-strip {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+
+  .dash-main .welcome-strip:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 58, 237, 0.3);
+    box-shadow: var(--shadow-2);
+  }
+
+  /* Keep every dashboard card interactive, including cards added on sub-pages. */
+  .dash-body .kpi-card:hover,
+  .dash-body .panel:hover,
+  .dash-body .team-card:hover,
+  .dash-body .notif-card:hover,
+  .dash-body .report-card:hover {
+    border-color: rgba(124, 58, 237, 0.35);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .dash-body .kpi-card:hover,
+  .dash-body .dashboard-charts > .panel:hover {
+    transform: translateY(-8px) scale(1.015);
+    box-shadow: 0 24px 48px -18px rgba(124, 58, 237, 0.55);
+  }
+
   .top-avatar {
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   }
@@ -833,6 +871,62 @@ body.dark .panel {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+.dashboard-charts {
+  align-items: stretch;
+}
+
+.dashboard-charts > .panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-charts .chart-box,
+.dashboard-charts .chart-box.sm {
+  height: 280px;
+  flex: 1 1 auto;
+}
+
+/* KPI and chart cards keep their hover feedback on every desktop browser. */
+.dash-body .kpi-card,
+.dash-body .dashboard-charts > .panel {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.dash-body .kpi-card:hover,
+.dash-body .dashboard-charts > .panel:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 24px 48px -18px rgba(124, 58, 237, 0.55);
+}
+
+/* Applies the same interaction to graph cards on every dashboard page. */
+.dash-body .panel {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.dash-body .panel:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: 0 24px 48px -18px rgba(124, 58, 237, 0.55);
+}
+
+/* Final explicit targets for the Analytics KPI and graph cards. */
+.dash-body .kpi-card,
+.dash-body .chart-grid-2 > .panel,
+.dash-body .chart-grid-3 > .panel {
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.dash-body .kpi-card:hover,
+.dash-body .chart-grid-2 > .panel:hover,
+.dash-body .chart-grid-3 > .panel:hover {
+  transform: translateY(-10px) !important;
+  border-color: rgba(124, 58, 237, 0.55) !important;
+  box-shadow: 0 28px 56px -18px rgba(124, 58, 237, 0.7) !important;
 }
 
 .chart-grid-2 {
