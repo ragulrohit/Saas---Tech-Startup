@@ -408,6 +408,10 @@ textarea {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.menu-btn.open span {
+  background: #fff;
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -1864,13 +1868,17 @@ textarea {
   .nav-links {
     position: fixed;
     inset: 0;
-    top: 0;
-    background: rgba(7, 11, 31, 0.97);
+    width: 100%;
+    height: 100dvh;
+    min-height: 100vh;
+    background: #070b1f;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     z-index: 1001;
+    overflow-y: auto;
+    padding: 88px 20px 150px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s;
@@ -1904,11 +1912,8 @@ textarea {
   .nav-cta.in-menu {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    bottom: 34px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1002;
+    position: static;
+    transform: none;
     gap: 10px;
     opacity: 0;
     pointer-events: none;
@@ -1918,6 +1923,10 @@ textarea {
   .nav-cta.in-menu.show {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .mobile-menu-cta {
+    margin-top: 18px;
   }
 
   .nav-cta.in-menu .btn {

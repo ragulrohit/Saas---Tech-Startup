@@ -6,6 +6,22 @@
 (function () {
   "use strict";
 
+  document.querySelectorAll("[data-password-toggle]").forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
+      var input = document.getElementById(toggle.getAttribute("data-password-toggle"));
+      var icon = toggle.querySelector("i");
+      if (!input) return;
+
+      var showing = input.type === "text";
+      input.type = showing ? "password" : "text";
+      toggle.setAttribute("aria-label", showing ? "Show password" : "Hide password");
+      if (icon) {
+        icon.classList.toggle("fa-eye", showing);
+        icon.classList.toggle("fa-eye-slash", !showing);
+      }
+    });
+  });
+
   var inPages = window.location.pathname.replace(/\\/g, "/").indexOf("/pages/") !== -1;
   var root = inPages ? "../" : "";
   var notFoundUrl = root + "404.html";

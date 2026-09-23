@@ -98,10 +98,14 @@
   function openSidebar() {
     if (sidebar) sidebar.classList.add("open");
     if (overlay) overlay.classList.add("show");
+    if (menuOpenBtn) menuOpenBtn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
   }
   function closeSidebar() {
     if (sidebar) sidebar.classList.remove("open");
     if (overlay) overlay.classList.remove("show");
+    if (menuOpenBtn) menuOpenBtn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
   }
 
   var menuOpenBtn = document.getElementById("menuOpen");
@@ -109,6 +113,9 @@
   var sidebarClose = document.getElementById("sidebarClose");
   if (sidebarClose) sidebarClose.addEventListener("click", closeSidebar);
   if (overlay) overlay.addEventListener("click", closeSidebar);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && sidebar && sidebar.classList.contains("open")) closeSidebar();
+  });
 
   /* =====================================================================
    ACTIVE SIDEBAR LINK

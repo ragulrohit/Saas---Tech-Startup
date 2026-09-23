@@ -44,10 +44,14 @@
     menuBtn.addEventListener("click", function () {
       setMenu();
     });
-    navLinks.addEventListener("click", function (e) {
+    if (navLinks) navLinks.addEventListener("click", function (e) {
       if (e.target.closest("a")) setMenu(false);
     });
   }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && menuOpen) setMenu(false);
+  });
 
   /* ---------- Active nav link ---------- */
   var currentFile = (window.location.pathname.replace(/\\/g, "/").split("/").pop() || "index.html").toLowerCase();
